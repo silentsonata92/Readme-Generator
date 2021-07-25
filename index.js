@@ -2,7 +2,7 @@ const generateReadMe = require('./markdown.js')
 const { prompt } = require('inquirer')
 const util = require("util")
 const fs = require('fs')
-
+//array of questions
 const questions = [ 
     {
       type: 'input',
@@ -46,7 +46,7 @@ const questions = [
       message: 'Questions:'
     }
   ]
-
+//function to generate a new file
 function writeToFile(fileName, data) {
 
   fs.writeFile(fileName, data, (err) => {
@@ -64,5 +64,5 @@ function init() {
       console.log(data)
     })
 }
-// function call to initialize program
+
 init();
