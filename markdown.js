@@ -1,11 +1,12 @@
+function generateReadMe(data) {
+  return `
+    # <${data.title}>
 
-    # <Project>
-
-    ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
+    ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
     ---
     ## Description
     ---
-    for homework
+    ${data.description}
     ---
     ## Table of Contents
     ---
@@ -19,29 +20,32 @@
     ## Installation
     ---
     These dependencies are need in order to run the app successfully:
-    npm inquirer
+    ${data.installation}
     ---
     ## Usage
     ---
     To make app run: 
-    just follow the video
+    ${data.usage}
     ---
     ## License
     ---
-    MIT
+    ${data.license}
     ---
     ## Contributing
     ---
-    just do it
+    ${data.contributing}
     ---
     ## Tests
     ---
-    just do it
+    ${data.tests}
     ---
     ## Questions
     ---
     How to reach me:
-    nothing
+    ${data.questions}
     ---
     
-    
+    `
+  }
+  
+module.exports = generateReadMe
